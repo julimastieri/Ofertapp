@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryLightColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <item name="colorError">#F44336</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#212121</item>
+        <item name="android:colorBackground">@color/fondo</item>
+        <item name="colorOnBackground">#212121</item>
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
+    </style>
+
+</resources>

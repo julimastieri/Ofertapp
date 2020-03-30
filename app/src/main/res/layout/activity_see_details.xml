@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/txt_mostrar_tipo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:text="@string/Tipo"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_precio"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/pesos"
+                    android:src="@drawable/precio" />
+
+                <TextView
+                    android:id="@+id/txt_mostrar_precio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/Precio"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_marca"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/Marca"
+                    android:src="@drawable/marca" />
+
+                <TextView
+                    android:id="@+id/txt_marca_sd"
+                    android:layout_width="12dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/txt_marca_sd"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_mostrar_marca"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Marca"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_categoria"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/Categoria"
+                    android:src="@drawable/categoria" />
+
+                <TextView
+                    android:id="@+id/txt_categoria_sd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:text="@string/txt_categoria_sd"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_mostrar_categoria"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Categoria"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_fecha"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/Fecha_Venc"
+                    android:src="@drawable/fecha" />
+
+                <TextView
+                    android:id="@+id/txt_valida_sd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/txt_fecha_sd"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_mostrar_fecha"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Fecha_Venc"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_comercio"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+
+                    android:layout_weight="1"
+                    android:contentDescription="@string/Comercio"
+                    android:src="@drawable/comercio" />
+
+                <TextView
+                    android:id="@+id/txt_comercio_sd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/txt_comercio_sd"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_mostrar_comercio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/Comercio"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        tools:context=".seeDetails" />
+
+</LinearLayout>

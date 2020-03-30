@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    <color name="colorPrimary">#cddc39</color>
+    <color name="colorPrimaryDark">#AFB42B</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="fondo">#dfe2bc</color>
+    <color name="letra">#b0213e</color>
+    <color name="letra2">#fdf4086a</color>
+    <color name="letra3">#f57c00</color>
+    -->
+    <color name="primaryColor">#ff8e56</color>
+    <color name="primaryLightColor">#ffbf84</color>
+    <color name="primaryDarkColor">#c75f2a</color>
+    <color name="secondaryColor">#00695c</color>
+    <color name="secondaryLightColor">#439889</color>
+    <color name="secondaryDarkColor">#003d33</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="fondo">#85ccb4</color>
+
+</resources>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Ofertapp</string>
+
+    //Main Activity
+    <string name="id_facebook">592857134445286</string>
+    <string name="fb_login_protocol_scheme">fb592857134445286</string>
+
+    //Menu activity
+    <string name="b_manu_agregar">Agregar oferta</string>
+    <string name="b_menu_buscar">Buscar ofertas</string>
+    <string name="b_menu_act_loc">Notificaciones</string>
+    <string name="Logo">logo</string>
+    <string name="Estado">Estado del inicio de sesión</string>
+
+    //Agregar oferta activity
+    <string name="Precio">Precio</string>
+    <string name="Marca">Marca</string>
+    <string name="Categoria">Categoria</string>
+    <string name="Tipo">Tipo</string>
+    <string name="Comercio">Comercio</string>
+    <string name="Fecha_Venc">Vencimiento</string>
+    <string name="boton_agregar">Agregar</string>
+    <string name="boton_foto">foto</string>
+    <string name="ibt_ubicacion">nada</string>
+
+    //Maps Activity
+    <string name="serchBarText">Buscar lugar</string>
+
+    //Buscar oferta activity
+    <string name="instrucciones">Filtros</string>
+    <string name="RadioDist">Radio de distancia</string>
+    <string name="ButtonBuscar">Buscar</string>
+
+    //Listar ofertas
+    <string name="txt_tipo">Tipo</string>
+    <string name="txt_precio">Precio</string>
+    <string name="txt_verdatelles">Ver detalles</string>
+    <string name="pesos">$</string>
+
+
+    //See details
+    <string name="txt_marca_sd">Marca:</string>
+    <string name="txt_categoria_sd">Categoria:</string>
+    <string name="txt_fecha_sd">Valida hasta:</string>
+    <string name="txt_comercio_sd">Comercio:</string>
+
+    //Activity notifications
+    <string name="distancia">Radio de cercanía</string>
+    <string name="activar">Activar notificaciones</string>
+    <string name="desactivar">Desactivar notificaciones</string>
+
+    //Activitis con permiso de acceso a mapas
+    <string name="title_activity_maps" />
+</resources>
