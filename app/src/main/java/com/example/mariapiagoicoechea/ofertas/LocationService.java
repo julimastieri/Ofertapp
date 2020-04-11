@@ -61,6 +61,7 @@ public class LocationService extends Service {
 
     private List<Oferta> ofertList;
     private double distanciaMax=1;
+    private String ipport;
 
     public  LocationService(){}
 
@@ -155,7 +156,7 @@ public class LocationService extends Service {
 
     private void searchInDataBase(double latitud, double longitud){
 
-        String URL_ofertas = "http://192.168.0.200/ofertas/buscarPorLocalizacion.php?latitud=" + latitud
+        String URL_ofertas = "http://"+ipport+"/www/buscarPorLocalizacion.php?latitud=" + latitud
                 + "&longitud=" + longitud + "&distanciaMax=" + distanciaMax;
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_ofertas,
@@ -245,8 +246,10 @@ public class LocationService extends Service {
 
     private final IBinder mBinder = new LocalBinder();
 
-    public void requestLocationUpdates(double distanciaMax) {
+    public void requestLocationUpdates(double distanciaMax, String ipport) {
         this.distanciaMax = distanciaMax;
+        this.ipport = ipport;
+
         startService(new Intent(getApplicationContext(),LocationService.class));
         try{
             fusedLocationProviderClient.requestLocationUpdates(locationRequest,locationCallback, Looper.myLooper());

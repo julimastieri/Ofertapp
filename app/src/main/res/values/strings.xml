@@ -11,6 +11,7 @@
     <string name="b_menu_act_loc">Notificaciones</string>
     <string name="Logo">logo</string>
     <string name="Estado">Estado del inicio de sesión</string>
+    <string name="ip_port">IP:PORT</string>
 
     //Agregar oferta activity
     <string name="Precio">Precio</string>

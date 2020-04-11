@@ -3,7 +3,6 @@ package com.example.mariapiagoicoechea.ofertas;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +29,7 @@ public class BuscarOferta extends AppCompatActivity {
     private TextInputEditText et_tipo_b;
     private TextInputEditText et_comercio_b;
     private List<Oferta> ofertList;
+    private String ipport;
 
 
     @Override
@@ -39,6 +39,8 @@ public class BuscarOferta extends AppCompatActivity {
         ofertList = new ArrayList<>();
         ponerLogo();
         inicializarControles ();
+        Bundle extras = getIntent().getExtras();
+        ipport = extras.getString("ipport");
 
     }
 
@@ -48,7 +50,7 @@ public class BuscarOferta extends AppCompatActivity {
     }
 
     private void inicializarControles (){
-        et_marca_b = findViewById(R.id.txt_marca_bus);
+        et_marca_b = findViewById(R.id.txt_ip_port);
         et_categoria_b =  findViewById(R.id.txt_categoria_bus);
         et_tipo_b = findViewById(R.id.txt_tipo_bus);
         et_comercio_b = findViewById(R.id.txt_comercio_bus);
@@ -61,8 +63,20 @@ public class BuscarOferta extends AppCompatActivity {
 
     private void searchInDataBase(){
 
-        String URL_ofertas = "http://192.168.0.200/ofertas/buscarmod.php?marca=" + et_marca_b.getText().toString()
-                + "&categoria=" + et_categoria_b.getText().toString() + "&tipo=" + et_tipo_b.getText().toString() + "&comercio=" + et_comercio_b.getText().toString();
+        String URL_ofertas = "http://"+ipport+"/www/buscarmod.php?";
+
+        /*"marca="+et_marca_b.getText().toString()
+                +"&categoria="+ et_categoria_b.getText().toString()+"&tipo="+et_tipo_b.getText().toString()+"&comercio="
+                + et_comercio_b.getText().toString();*/
+
+        if (!et_marca_b.getText().toString().equals(""))
+            URL_ofertas = URL_ofertas + "marca=" + et_marca_b.getText().toString()+ "&";
+        if (!et_categoria_b.getText().toString().equals(""))
+            URL_ofertas = URL_ofertas + "categoria=" + et_categoria_b.getText().toString()+ "&";
+        if (!et_tipo_b.getText().toString().equals(""))
+            URL_ofertas = URL_ofertas + "tipo=" + et_tipo_b.getText().toString()+ "&";
+        if (!et_comercio_b.getText().toString().equals(""))
+            URL_ofertas = URL_ofertas + "comercio=" + et_comercio_b.getText().toString();
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_ofertas,
                 new Response.Listener<String>() {

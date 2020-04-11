@@ -32,6 +32,9 @@ public class notificationsActivity extends AppCompatActivity {
     private Button activarNotificaciones, desactivarNotificaciones;
     private EditText et_distancia;
 
+    private String ipport;
+
+
     LocationService mLocationService=null;
     boolean mBound=false;
 
@@ -40,9 +43,9 @@ public class notificationsActivity extends AppCompatActivity {
         public void afterTextChanged(Editable s) {
             mLocationService.removeLocationUpdates();
             if (et_distancia.getText().toString().isEmpty())
-                mLocationService.requestLocationUpdates(DEFAULT_DISTANCE);
+                mLocationService.requestLocationUpdates(DEFAULT_DISTANCE, ipport);
             else
-                mLocationService.requestLocationUpdates(Double.parseDouble(et_distancia.getText().toString()));
+                mLocationService.requestLocationUpdates(Double.parseDouble(et_distancia.getText().toString()),ipport);
         }
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
         public void onTextChanged(CharSequence s, int start, int before,
@@ -74,6 +77,9 @@ public class notificationsActivity extends AppCompatActivity {
 
         et_distancia.addTextChangedListener(textWatcher);
 
+        Bundle extras = getIntent().getExtras();
+        ipport = extras.getString("ipport");
+
         Dexter.withActivity(this).withPermissions(Arrays.asList(
                 Manifest.permission.ACCESS_BACKGROUND_LOCATION,
                 Manifest.permission.ACCESS_FINE_LOCATION,
@@ -92,9 +98,9 @@ public class notificationsActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View v) {
                                     if (et_distancia.getText().toString().isEmpty())
-                                        mLocationService.requestLocationUpdates(DEFAULT_DISTANCE);
+                                        mLocationService.requestLocationUpdates(DEFAULT_DISTANCE, ipport);
                                     else {
-                                        mLocationService.requestLocationUpdates(Double.parseDouble(et_distancia.getText().toString()));
+                                        mLocationService.requestLocationUpdates(Double.parseDouble(et_distancia.getText().toString()), ipport);
                                     }
                                 }
                             });

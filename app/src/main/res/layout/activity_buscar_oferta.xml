@@ -49,7 +49,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_marca_bus"
+                    android:id="@+id/txt_ip_port"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 

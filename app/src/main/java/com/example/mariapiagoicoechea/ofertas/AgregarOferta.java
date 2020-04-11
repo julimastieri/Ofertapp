@@ -46,6 +46,7 @@ public class AgregarOferta extends AppCompatActivity implements Response.Listene
     private ImageButton ibt_ubicacion_a;
     private double latitud;
     private double longitud;
+    private String ipport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,10 @@ public class AgregarOferta extends AppCompatActivity implements Response.Listene
         ponerLogo();
 
         inicializarControles();
+
+        //recibe ipport
+        Bundle extras = getIntent().getExtras();
+        ipport = extras.getString("ipport");
 
         configDatePicker();
 
@@ -118,7 +123,7 @@ public class AgregarOferta extends AppCompatActivity implements Response.Listene
         } else if (volleyError instanceof TimeoutError) {
             message = "Connection TimeOut! Please check your internet connection.";
         }
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, volleyError.toString(), Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -139,7 +144,7 @@ public class AgregarOferta extends AppCompatActivity implements Response.Listene
     }
 
     private void addOffer() {
-        String url = "http://192.168.0.200/ofertas/registrar.php?precio=" +  et_precio_a.getText().toString() +
+        String url = "http://"+ipport+"/www/registrar.php?precio=" +  et_precio_a.getText().toString() +
                 "&marca=" + upperCaseFirstLetter( et_marca_a.getText().toString().toLowerCase() ) + "&categoria=" + upperCaseFirstLetter ( et_categoria_a.getText().toString().toLowerCase() )+
                 "&tipo=" + upperCaseFirstLetter ( et_tipo_a.getText().toString().toLowerCase() )+  "&comercio=" + upperCaseFirstLetter( et_comercio_a.getText().toString().toLowerCase() )+
                 "&fecha_venc="+ et_fechav_a.getText().toString()+ "&latitud=" + latitud + "&longitud=" + longitud;
